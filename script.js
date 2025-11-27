@@ -216,92 +216,107 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 
 
 if (typeof particlesJS !== 'undefined') {
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 120,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
                 }
             },
-            color: {
-                value: ['#2563eb', '#9333ea', '#60a5fa', '#a78bfa']
+            "color": {
+                "value": ["#2563eb", "#9333ea", "#8aabb5", "#60a5fa", "#a78bfa", "#ec4899"]
             },
-            shape: {
-                type: 'circle',
-                stroke: {
-                    width: 0,
-                    color: '#000000'
+            "shape": {
+                "type": ["circle", "triangle", "edge"],
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 6
                 }
             },
-            opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
+            "opacity": {
+                "value": 0.6,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "opacity_min": 0.1,
+                    "sync": false
                 }
             },
-            size: {
-                value: 4,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 0.1,
-                    sync: false
+            "size": {
+                "value": 5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 3,
+                    "size_min": 0.5,
+                    "sync": false
                 }
             },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#2563eb',
-                opacity: 0.3,
-                width: 1
+            "line_linked": {
+                "enable": true,
+                "distance": 180,
+                "color": "#8aabb5",
+                "opacity": 0.35,
+                "width": 1.5
             },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: true,
-                    rotateX: 600,
-                    rotateY: 1200
+            "move": {
+                "enable": true,
+                "speed": 4,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "bounce",
+                "bounce": true,
+                "attract": {
+                    "enable": true,
+                    "rotateX": 800,
+                    "rotateY": 1600
                 }
             }
         },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'grab'
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": ["grab", "bubble"]
                 },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
+                "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
                 },
-                resize: true
+                "resize": true
             },
-            modes: {
-                grab: {
-                    distance: 140,
-                    line_linked: {
-                        opacity: 0.5
+            "modes": {
+                "grab": {
+                    "distance": 250,
+                    "line_linked": {
+                        "opacity": 0.8
                     }
                 },
-                push: {
-                    particles_nb: 4
+                "bubble": {
+                    "distance": 300,
+                    "size": 12,
+                    "duration": 2,
+                    "opacity": 1,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.6
+                },
+                "push": {
+                    "particles_nb": 6
                 }
             }
         },
-        retina_detect: true
+        "retina_detect": true
     });
+    
 }
